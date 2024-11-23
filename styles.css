@@ -1,0 +1,204 @@
+/* Importa la fuente Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reinicia los márgenes y rellenos de todos los elementos y establece una fuente global */
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto total */
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente Montserrat */
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    display: flex; /* Usa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(img/bg.jpg); /* Fondo con degradado y una imagen */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+}
+
+/* Estilos del contenedor principal */
+.container {
+    display: grid; /* Usa grid para organizar elementos */
+    grid-template-columns: repeat(2, 50%); /* Dos columnas del 50% cada una */
+    padding: 20px; /* Espaciado interno */
+    gap: 10px; /* Espacio entre elementos */
+    width: 1000px; /* Ancho fijo */
+}
+
+/* Estilos para la información */
+.box-info {
+    color: #fff; /* Color del texto */
+    display: flex; /* Flexbox para disposición vertical */
+    flex-direction: column; /* Coloca los hijos en columna */
+    gap: 50px; /* Espacio entre elementos */
+}
+
+/* Estilos para el título dentro de box-info */
+.box-info > h1 {
+    text-align: left; /* Alinea el texto a la izquierda */
+    letter-spacing: 5px; /* Espaciado entre letras */
+}
+
+/* Estilos para la sección de datos */
+.data {
+    display: flex; /* Flexbox para disposición vertical */
+    flex-direction: column; /* Coloca los hijos en columna */
+    gap: 25px; /* Espacio entre elementos */
+}
+
+/* Estilos para los párrafos dentro de la sección de datos */
+.data > p {
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilos para iconos dentro de los párrafos */
+.data > p > i {
+    color: crimson; /* Color del icono */
+    margin-right: 10px; /* Espacio a la derecha del icono */
+    font-size: 25px; /* Tamaño del icono */
+}
+
+/* Estilos para los enlaces */
+.links {
+    display: flex; /* Flexbox para disposición horizontal */
+    gap: 15px; /* Espacio entre enlaces */
+}
+
+/* Estilos para los enlaces dentro de la clase links */
+.links > a {
+    text-decoration: none; /* Sin subrayado */
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Alto fijo */
+    background: crimson; /* Fondo color carmesí */
+    text-align: center; /* Alineación central del texto */
+    transition: .1s; /* Transición suave para cambios */
+}
+
+/* Estilos para iconos dentro de los enlaces */
+.links > a > i {
+    color: #fff; /* Color del icono */
+    line-height: 40px; /* Alineación vertical del icono */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Flexbox para disposición vertical */
+    flex-direction: column; /* Coloca los hijos en columna */
+    text-align: center; /* Alineación central del texto */
+    gap: 15px; /* Espacio entre elementos */
+}
+
+/* Estilos para los elementos de entrada */
+.input-box {
+    position: relative; /* Posición relativa para manejar iconos */
+}
+
+/* Estilos para los campos de entrada */
+.input-box > input {
+    width: 100%; /* Ancho completo */
+    height: 40px; /* Alto fijo */
+    padding: 0 10px; /* Espaciado interno */
+    outline: none; /* Sin borde de enfoque */
+    background: rgba(255 255 255 / .1); /* Fondo semi-transparente */
+    border: 3px solid transparent; /* Borde transparente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: .3s; /* Transición suave para cambios */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el texto del placeholder en campos de entrada */
+.input-box > input::placeholder,
+.input-box > textarea::placeholder {
+    color: #a3a3a3; /* Color del placeholder */
+}
+
+/* Estilos para el placeholder al recibir foco */
+.input-box > input:focus::placeholder,
+.input-box > textarea:focus::placeholder {
+    color: transparent; /* Oculta el placeholder al recibir foco */
+}
+
+/* Estilos para el campo de entrada al recibir foco */
+.input-box > input:focus,
+.input-box > textarea:focus {
+    border-bottom: 3px solid crimson; /* Borde inferior carmesí al recibir foco */
+    animation: shake .2s; /* Animación de sacudida */
+}
+
+/* Estilos para los campos de texto */
+.input-box > textarea {
+    width: 100%; /* Ancho completo */
+    height: 130px; /* Alto fijo */
+    padding: 10px; /* Espaciado interno */
+    background: rgba(255 255 255 / .1); /* Fondo semi-transparente */
+    border: 3px solid transparent; /* Borde transparente */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    outline: none; /* Sin borde de enfoque */
+    transition: .3s; /* Transición suave para cambios */
+    color: #fff; /* Color del texto */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Estilos para el icono dentro del campo de entrada */
+.input-box > i {
+    position: absolute; /* Posición absoluta para superposición */
+    top: 50%; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste de posición */
+    right: 10px; /* Espacio a la derecha */
+    color: rgba(255 255 255 / .3); /* Color del icono */
+    transition: .3s; /* Transición suave para cambios */
+}
+
+/* Cambia el color del icono al recibir foco en el campo */
+.input-box > input:focus ~ i {
+    color: crimson; /* Color carmesí al recibir foco */
+}
+
+/* Estilos para el botón del formulario */
+form > button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    outline: none; /* Sin borde de enfoque */
+    background: crimson; /* Fondo carmesí */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    transition: .1s; /* Transición suave para cambios */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Efecto hover para el botón y enlaces */
+form > button:hover,
+.links > a:hover {
+    background: rgb(172, 16, 47); /* Cambia el fondo al pasar el ratón */
+}
+
+/* Definición de la animación de sacudida */
+/*@keyframes shake { 
+    0%, 100% {transform: translateX(0);} /* Posición original */
+    /*10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} /* Mueve a la izquierda */
+    /*20%, 40%, 60%, 80% {transform: translateX(10px);} /* Mueve a la derecha */
+/*}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%; /* Ancho reducido para pantallas pequeñas */
+        display: flex; /* Usa flexbox para disposición vertical */
+        flex-direction: column; /* Coloca los hijos en columna */
+        gap: 20px; /* Espacio entre elementos */
+    }
+
+    .box-info {
+        gap: 15px; /* Espacio entre elementos de box-info */
+    }
+
+    .box-info > h1 {
+        font-size: 1.5rem; /* Tamaño de fuente reducido para el título */
+    }
+}
